@@ -69,7 +69,6 @@ band1Black.addEventListener('click', () => {
     b0.classList.remove(currentColor);
     b0.classList.add('black');
     bands[0] = 'black';
-    console.log(bands)
 });
 band1Brown.addEventListener('click', () => {
     const currentColor = getColorClass(b0);
@@ -310,7 +309,6 @@ toleranceSilver.addEventListener('click', () => {
     b3.classList.remove(currentColor);
     b3.classList.add('silver');
     bands[3] = 'silver';
-    console.log(getResistorOhms(bands))
 });
 
 allBoxes.forEach((element) => element.addEventListener('click', () => setResistorString(bands)));

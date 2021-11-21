@@ -66,7 +66,6 @@ function getMultiplierValue(color) {
 }
 
 function getThreeBandValue(bands) {
-  console.log(bands[0])
   let final =
     getColorValue(bands[0]).toString() +
     getColorValue(bands[1]).toString();
@@ -98,7 +97,6 @@ function getTolerance(color) {
 }
 
 const getResistorOhms = (bands) => {
-  console.log(bands);
   const resistorValue = formatNumber(getThreeBandValue(bands));
   const tolerance = getTolerance(bands[3]);
   return `Resistor value: ${resistorValue} Ohms ${tolerance}`;
