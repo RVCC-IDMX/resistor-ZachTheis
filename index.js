@@ -58,57 +58,72 @@ const toleranceGrey = tolerance.querySelector('.grey');
 const toleranceGold = tolerance.querySelector('.gold');
 const toleranceSilver = tolerance.querySelector('.silver');
 
+const allBoxes = document.querySelectorAll(".box");
+const answer = document.querySelector(".answer");
+let bands = ['red','green', 'violet', 'gold',];
+let resistorString;
+
 // Band 1 event listeners
 band1Black.addEventListener('click', () => {
-    console.log("band 1 black")
     const currentColor = getColorClass(b0);
     b0.classList.remove(currentColor);
     b0.classList.add('black');
+    bands[0] = 'black';
+    console.log(bands)
 });
 band1Brown.addEventListener('click', () => {
     const currentColor = getColorClass(b0);
     b0.classList.remove(currentColor);
     b0.classList.add('brown');
+    bands[0] = 'brown';
 });
 band1Red.addEventListener('click', () => {
     const currentColor = getColorClass(b0);
     b0.classList.remove(currentColor);
     b0.classList.add('red');
+    bands[0] = 'red';
 });
 band1Orange.addEventListener('click', () => {
     const currentColor = getColorClass(b0);
     b0.classList.remove(currentColor);
     b0.classList.add('orange');
+    bands[0] = 'orange';
 });
 band1Yellow.addEventListener('click', () => {
     const currentColor = getColorClass(b0);
     b0.classList.remove(currentColor);
     b0.classList.add('yellow');
+    bands[0] = 'yellow';
 });
 band1Green.addEventListener('click', () => {
     const currentColor = getColorClass(b0);
     b0.classList.remove(currentColor);
     b0.classList.add('green');
+    bands[0] = 'green';
 });
 band1Blue.addEventListener('click', () => {
     const currentColor = getColorClass(b0);
     b0.classList.remove(currentColor);
     b0.classList.add('blue');
+    bands[0] = 'blue';
 });
 band1Violet.addEventListener('click', () => {
     const currentColor = getColorClass(b0);
     b0.classList.remove(currentColor);
     b0.classList.add('violet');
+    bands[0] = 'violet';
 });
 band1Grey.addEventListener('click', () => {
     const currentColor = getColorClass(b0);
     b0.classList.remove(currentColor);
     b0.classList.add('grey');
+    bands[0] = 'grey';
 });
 band1White.addEventListener('click', () => {
     const currentColor = getColorClass(b0);
     b0.classList.remove(currentColor);
     b0.classList.add('white');
+    bands[0] = 'white';
 });
 
 // Band 2 event listeners
@@ -116,51 +131,61 @@ band2Black.addEventListener('click', () => {
     const currentColor = getColorClass(b1);
     b1.classList.remove(currentColor);
     b1.classList.add('black');
+    bands[1] = 'black';
 });
 band2Brown.addEventListener('click', () => {
     const currentColor = getColorClass(b1);
     b1.classList.remove(currentColor);
     b1.classList.add('brown');
+    bands[1] = 'brown';
 });
 band2Red.addEventListener('click', () => {
     const currentColor = getColorClass(b1);
     b1.classList.remove(currentColor);
     b1.classList.add('red');
+    bands[1] = 'red';
 });
 band2Orange.addEventListener('click', () => {
     const currentColor = getColorClass(b1);
     b1.classList.remove(currentColor);
     b1.classList.add('orange');
+    bands[1] = 'orange';
 });
 band2Yellow.addEventListener('click', () => {
     const currentColor = getColorClass(b1);
     b1.classList.remove(currentColor);
     b1.classList.add('yellow');
+    bands[1] = 'yellow';
 });
 band2Green.addEventListener('click', () => {
     const currentColor = getColorClass(b1);
     b1.classList.remove(currentColor);
     b1.classList.add('green');
+    bands[1] = 'green';
 });
 band2Blue.addEventListener('click', () => {
     const currentColor = getColorClass(b1);
     b1.classList.remove(currentColor);
     b1.classList.add('blue');
+    bands[1] = 'blue';
 });
 band2Violet.addEventListener('click', () => {
     const currentColor = getColorClass(b1);
     b1.classList.remove(currentColor);
     b1.classList.add('violet');
+    bands[1] = 'violet';
 });
 band2Grey.addEventListener('click', () => {
     const currentColor = getColorClass(b1);
     b1.classList.remove(currentColor);
     b1.classList.add('grey');
+    bands[1] = 'grey';
 });
 band2White.addEventListener('click', () => {
     const currentColor = getColorClass(b1);
     b1.classList.remove(currentColor);
     b1.classList.add('white');
+    bands[1] = 'white';
 });
 
 // Multiplier event listeners
@@ -168,61 +193,73 @@ multiplierBlack.addEventListener('click', () => {
     const currentColor = getColorClass(b2);
     b2.classList.remove(currentColor);
     b2.classList.add('black');
+    bands[2] = 'black';
 });
 multiplierBrown.addEventListener('click', () => {
     const currentColor = getColorClass(b2);
     b2.classList.remove(currentColor);
     b2.classList.add('brown');
+    bands[2] = 'brown';
 });
 multiplierRed.addEventListener('click', () => {
     const currentColor = getColorClass(b2);
     b2.classList.remove(currentColor);
     b2.classList.add('red');
+    bands[2] = 'red';
 });
 multiplierOrange.addEventListener('click', () => {
     const currentColor = getColorClass(b2);
     b2.classList.remove(currentColor);
     b2.classList.add('orange');
+    bands[2] = 'orange';
 });
 multiplierYellow.addEventListener('click', () => {
     const currentColor = getColorClass(b2);
     b2.classList.remove(currentColor);
     b2.classList.add('yellow');
+    bands[2] = 'yellow';
 });
 multiplierGreen.addEventListener('click', () => {
     const currentColor = getColorClass(b2);
     b2.classList.remove(currentColor);
     b2.classList.add('green');
+    bands[2] = 'green';
 });
 multiplierBlue.addEventListener('click', () => {
     const currentColor = getColorClass(b2);
     b2.classList.remove(currentColor);
     b2.classList.add('blue');
+    bands[2] = 'blue';
 });
 multiplierViolet.addEventListener('click', () => {
     const currentColor = getColorClass(b2);
     b2.classList.remove(currentColor);
     b2.classList.add('violet');
+    bands[2] = 'violet';
 });
 multiplierGrey.addEventListener('click', () => {
     const currentColor = getColorClass(b2);
     b2.classList.remove(currentColor);
     b2.classList.add('grey');
+    bands[2] = 'grey';
 });
 multiplierWhite.addEventListener('click', () => {
     const currentColor = getColorClass(b2);
     b2.classList.remove(currentColor);
     b2.classList.add('white');
+    bands[2] = 'white';
 });
 multiplierGold.addEventListener('click', () => {
     const currentColor = getColorClass(b2);
     b2.classList.remove(currentColor);
     b2.classList.add('gold');
+    bands[2] = 'gold';
 });
 multiplierSilver.addEventListener('click', () => {
     const currentColor = getColorClass(b2);
     b2.classList.remove(currentColor);
     b2.classList.add('silver');
+    bands[2] = 'silver';
 });
 
 // Tolerance event listeners
@@ -230,44 +267,59 @@ toleranceBrown.addEventListener('click', () => {
     const currentColor = getColorClass(b3);
     b3.classList.remove(currentColor);
     b3.classList.add('brown');
+    bands[3] = 'brown';
 });
 toleranceRed.addEventListener('click', () => {
     const currentColor = getColorClass(b3);
     b3.classList.remove(currentColor);
     b3.classList.add('red');
+    bands[3] = 'red';
 });
 toleranceGreen.addEventListener('click', () => {
     const currentColor = getColorClass(b3);
     b3.classList.remove(currentColor);
     b3.classList.add('green');
+    bands[3] = 'green';
 });
 toleranceBlue.addEventListener('click', () => {
     const currentColor = getColorClass(b3);
     b3.classList.remove(currentColor);
     b3.classList.add('blue');
+    bands[3] = 'blue';
 });
 toleranceViolet.addEventListener('click', () => {
     const currentColor = getColorClass(b3);
     b3.classList.remove(currentColor);
     b3.classList.add('violet');
+    bands[3] = 'violet';
 });
 toleranceGrey.addEventListener('click', () => {
     const currentColor = getColorClass(b3);
     b3.classList.remove(currentColor);
     b3.classList.add('grey');
+    bands[3] = 'grey';
 });
 toleranceGold.addEventListener('click', () => {
     const currentColor = getColorClass(b3);
     b3.classList.remove(currentColor);
     b3.classList.add('gold');
+    bands[3] = 'gold';
 });
 toleranceSilver.addEventListener('click', () => {
     const currentColor = getColorClass(b3);
     b3.classList.remove(currentColor);
     b3.classList.add('silver');
+    bands[3] = 'silver';
+    console.log(getResistorOhms(bands))
 });
+
+allBoxes.forEach((element) => element.addEventListener('click', () => setResistorString(bands)));
 
 function getColorClass(ele) {
     const arr = Array.from(ele.classList);
     return arr.find(element => element !== 'band');
 };
+
+function setResistorString(bands) {
+    answer.innerText = getResistorOhms(bands);
+}

@@ -9,6 +9,8 @@
    http://bit.ly/2NjS274
 */
 
+let bands = [];
+
 function nFormatter(num, digits) {
   const lookup = [
     { value: 1, symbol: '' },
@@ -64,13 +66,14 @@ function getMultiplierValue(color) {
 }
 
 function getThreeBandValue(bands) {
+  console.log(bands[0])
   let final =
-    getColorValue(bands.color1).toString() +
-    getColorValue(bands.color2).toString();
-  final *= getMultiplierValue(bands.multiplier);
-  if (bands.multiplier === 'gold') {
+    getColorValue(bands[0]).toString() +
+    getColorValue(bands[1]).toString();
+  final *= getMultiplierValue(bands[2]);
+  if (bands[2] === 'gold') {
     final = Math.round(final * 10) / 10;
-  } else if (bands.multiplier === 'silver') {
+  } else if (bands[2] === 'silver') {
     final = Math.round(final * 100) / 100;
   }
   return final;
@@ -95,8 +98,9 @@ function getTolerance(color) {
 }
 
 const getResistorOhms = (bands) => {
+  console.log(bands);
   const resistorValue = formatNumber(getThreeBandValue(bands));
-  const tolerance = getTolerance(bands.tolerance);
+  const tolerance = getTolerance(bands[3]);
   return `Resistor value: ${resistorValue} Ohms ${tolerance}`;
 };
 
